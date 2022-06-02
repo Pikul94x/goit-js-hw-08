@@ -1,8 +1,8 @@
 import throttle from 'lodash.throttle';
 
-const feedbackForm = document.querySelector('.feedback-form');
+const form = document.querySelector('.feedback-form');
 
-feedbackForm.addEventListener('input', throttle(localData, 500));
+form.addEventListener('input', throttle(localData, 500));
 
 const email = document.querySelector('[name="email"]');
 const message = document.querySelector('[name="message"]');
@@ -25,7 +25,7 @@ function getLocalData() {
 
 getLocalData();
 
-feedbackForm.addEventListener('submit', submitData);
+form.addEventListener('submit', submitData);
 
 function submitData(e) {
   e.preventDefault();
